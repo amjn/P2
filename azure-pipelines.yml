@@ -1,0 +1,20 @@
+resources:
+ pipelines:
+   - pipeline: P1
+     project: Project1
+     source: jainamanjain.P1
+
+jobs:
+ - job: J5
+   pool: default
+   steps:
+      - publish: artifact4.artifact
+        artifact: A4
+
+
+ - job: J6
+   pool:
+    name: default
+   steps:
+      - publish: artifact5.artifact
+        artifact: A5

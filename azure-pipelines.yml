@@ -8,13 +8,15 @@ jobs:
  - job: J5
    pool: default
    steps:
-      - publish: artifact4.artifact
-        artifact: A4
+      - powershell: |
+            ls $(Build.ArtifactStagingDirectory)/ 
+      # - publish: artifact4.artifact
+      #   artifact: A4
 
 
- - job: J6
-   pool:
-    name: default
-   steps:
-      - publish: artifact5.artifact
-        artifact: A5
+#  - job: J6
+#    pool:
+#     name: default
+#    steps:
+#       - publish: artifact5.artifact
+#         artifact: A5

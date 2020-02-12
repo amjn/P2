@@ -2,21 +2,24 @@ resources:
  pipelines:
    - pipeline: P1
      project: Project1
-     source: jainamanjain.P1
+     source: amjn.P1
 
 jobs:
  - job: J5
    pool: default
    steps:
       - powershell: |
-            ls $(Build.ArtifactStagingDirectory)/ 
+            ls $(Build.ArtifactStagingDirectory)/
+      - download: P1
+        artifact: A2
       # - publish: artifact4.artifact
       #   artifact: A4
 
 
-#  - job: J6
-#    pool:
-#     name: default
-#    steps:
-#       - publish: artifact5.artifact
-#         artifact: A5
+ - job: J6
+   pool:
+    name: default
+   steps:
+      - download: P1
+      # - publish: artifact5.artifact
+      #   artifact: A5

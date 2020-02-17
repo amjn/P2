@@ -3,6 +3,7 @@ resources:
    - pipeline: P1
      project: Project1
      source: amjn.P1
+     trigger: true
 
 jobs:
  - job: J5

@@ -3,7 +3,7 @@ resources:
    - pipeline: P1
     #  project: tfsprodweu6test
      source: amjn.P1
-    #  trigger: true
+     trigger: true
 
 jobs:
  - job: J5
